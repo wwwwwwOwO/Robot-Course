@@ -1,0 +1,166 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.1051708437966747 0.24942506997663486 0.9626662080296816 3.9127762291821355
+  position -0.48040941796379655 0.44790750190709394 0.9994813007229805
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+CircleArena {
+  rotation 1 0 0 1.5707963267949
+  radius 2
+}
+Robot {
+  translation -0.018964530841033 -1.8516989950197134e-05 0.05799621205338077
+  rotation 0.5898831683651179 -0.7991179039792033 0.11596733686437301 0.0006911924800382976
+  children [
+    HingeJoint {
+      jointParameters DEF wheel1 HingeJointParameters {
+        position 167.999653480624
+        axis 0 1 0
+        anchor 0.1 -0.15 0
+      }
+      device [
+        RotationalMotor {
+          name "motor1"
+        }
+      ]
+      endPoint DEF wheel1 Solid {
+        translation 0.10000904157692769 0.14000000021571637 -1.3373561104940538e-05
+        rotation -1.6230875985075011e-06 -0.9999999999960061 2.313669364172035e-06 2.0116177041222025
+        children [
+          DEF wheel Shape {
+            appearance PBRAppearance {
+              baseColor 0.678431 0.498039 0.658824
+            }
+            geometry Cylinder {
+              height 0.05
+              radius 0.06
+            }
+          }
+        ]
+        name "solid(3)"
+        boundingObject USE wheel
+        physics DEF wheel_phy Physics {
+        }
+        linearVelocity 1.2539384293936792e-06 2.9014147974129083e-07 4.411529258757609e-09
+        angularVelocity 1.4673323575298332e-09 1.2365095279470808e-07 -2.3164363578982242e-07
+      }
+    }
+    HingeJoint {
+      jointParameters DEF wheel2 HingeJointParameters {
+        position 168.0003808011304
+        axis 0 1 0
+        anchor 0.1 0.15 0
+      }
+      device [
+        RotationalMotor {
+          name "motor2"
+        }
+      ]
+      endPoint DEF wheel2 Solid {
+        translation 0.10050361941725634 -0.13999998567911534 0.0002192397849083584
+        rotation 1.0663862456619054e-05 -0.9999999998710808 1.2005022513469073e-05 2.01089038372412
+        children [
+          DEF wheel Shape {
+            appearance PBRAppearance {
+              baseColor 0.678431 0.498039 0.658824
+            }
+            geometry Cylinder {
+              height 0.05
+              radius 0.06
+            }
+          }
+        ]
+        name "solid(2)"
+        boundingObject USE wheel
+        physics DEF wheel_phy Physics {
+        }
+        linearVelocity -1.392589556096987e-07 2.469997423576257e-07 4.185778728623293e-10
+        angularVelocity -1.229750553087746e-09 -9.643495716301929e-08 8.086653621977325e-08
+      }
+    }
+    HingeJoint {
+      jointParameters DEF wheel3 HingeJointParameters {
+        position 168.00001458214544
+        axis 0 1 0
+        anchor -0.1 0.15 0
+      }
+      device [
+        RotationalMotor {
+          name "motor3"
+        }
+      ]
+      endPoint DEF wheel3 Solid {
+        translation -0.09949897611398996 0.14000001450275193 0.00020686301599634723
+        rotation 8.543385005031602e-06 -0.9999999998790767 1.2994505582004438e-05 1.9898348037375997
+        children [
+          DEF wheel Shape {
+            appearance PBRAppearance {
+              baseColor 0.678431 0.498039 0.658824
+            }
+            geometry Cylinder {
+              height 0.05
+              radius 0.06
+            }
+          }
+        ]
+        name "solid(1)"
+        boundingObject USE wheel
+        physics DEF wheel_phy Physics {
+        }
+        linearVelocity -8.742890971144984e-07 -2.6749351195459517e-07 -4.565600633058001e-09
+        angularVelocity -3.046878627677076e-08 -1.840643954046632e-07 1.067536069696765e-07
+      }
+    }
+    HingeJoint {
+      jointParameters DEF wheel4 HingeJointParameters {
+        position 167.99998275060452
+        axis 0 1 0
+        anchor -0.1 -0.15 0
+      }
+      device [
+        RotationalMotor {
+          name "motor4"
+        }
+      ]
+      endPoint DEF wheel4 Solid {
+        translation -0.09949231767561828 -0.13999998538520517 0.00020984844159896158
+        rotation 8.375848633489238e-06 -0.9999999998795907 1.306383091884237e-05 1.9898666352715528
+        children [
+          DEF wheel Shape {
+            appearance PBRAppearance {
+              baseColor 0.678431 0.498039 0.658824
+            }
+            geometry Cylinder {
+              height 0.05
+              radius 0.06
+            }
+          }
+        ]
+        boundingObject USE wheel
+        physics DEF wheel_phy Physics {
+        }
+        linearVelocity -2.5688201360944153e-07 -2.660117092260028e-07 -2.0865318784666072e-10
+        angularVelocity -3.0379054636791694e-08 -1.1836973283495207e-07 1.175569316546028e-07
+      }
+    }
+    DEF BODY Shape {
+      appearance PBRAppearance {
+        baseColor 0.360784 0.207843 0.4
+      }
+      geometry Box {
+        size 0.3 0.2 0.08
+      }
+    }
+  ]
+  boundingObject USE BODY
+  physics Physics {
+  }
+  controller "my_controller"
+  linearVelocity -2.549432016695404e-08 8.667699065434409e-10 -9.508623577403342e-10
+  angularVelocity -1.6922960405356014e-08 -2.499263333050598e-08 1.1795218733315729e-07
+}
